@@ -1,5 +1,16 @@
 const headingEl = document.querySelector(".heading-primary-main");
 const headingCursor = document.querySelector(".heading-cursor");
+const contactForm = document.querySelector(".contact-form");
+const contactEmail = document.querySelector(".email");
+const contactSubject = document.querySelector(".subject");
+const contactMessage = document.querySelector(".message");
+const logoBox = document.querySelector(".logo-box");
+const logo = document.querySelector(".logo");
+const logoName = document.querySelector(".logo-name");
+const header = document.getElementById("header");
+const experienceEl = document.getElementById("experiences");
+const main = document.querySelector(".main");
+
 let headingText = headingEl.textContent;
 const headingTextLength = headingText.length;
 const newText = "Rayan Cherad.";
@@ -8,7 +19,8 @@ const newText = "Rayan Cherad.";
 window.addEventListener("load", () => {
   if (screen.width < 1088)
     document.body.innerHTML =
-      "<h1>Cannot Open the website on mobile screen!<h1>";
+      "<h1>Cannot Open the website on mobile screen!</h1>";
+  throw new Error("Cannot Open the website on mobile screen!");
 });
 
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -39,10 +51,6 @@ async function changeText() {
 
 changeText();
 
-const logoBox = document.querySelector(".logo-box");
-const logo = document.querySelector(".logo");
-const logoName = document.querySelector(".logo-name");
-
 logo.addEventListener("mouseover", () => {
   logoName.classList.remove("logo-name__leave-animate");
   logoName.classList.remove("logo-name__start-animate");
@@ -60,11 +68,8 @@ logoBox.addEventListener("mouseleave", () => {
   logoBox.appendChild(logoName);
 });
 
-const header = document.getElementById("header");
-
 const stickyNav = (entries) => {
   const [entry] = entries;
-  console.log(entry);
   const nav = `
     <nav class="clearfix" id="nav">
       <a href="/">
@@ -79,7 +84,6 @@ const stickyNav = (entries) => {
       <div class="links-container">
         <ul class="navigation">
           <li><a href="#header">Accueil</a></li>
-          <li><a href="#about">A propos</a></li>
           <li><a href="#experiences">Expériences</a></li>
           <li><a href="#contact">Contact</a></li>
           <a href="#" class="small-btn btn-outline-black">Savoir plus</a>
@@ -125,25 +129,158 @@ const intersectObserver = new IntersectionObserver(stickyNav, {
 });
 
 intersectObserver.observe(header);
+let closePopupBtn;
 
-/* <nav class="clearfix">
-      <a href="/">
-        <div class="logo-container">
-          <img src="assets/logo3.png" alt="Ryan Cherad" class="nav-logo" />
-          <span
-            class="nav__logo-name logo-name__start-animate logo-name__hidden"
-            >Ryan Cherad</span
-          >
+experienceEl.addEventListener("click", (e) => {
+  e.preventDefault();
+  const clicked = e.target;
+  if (clicked.tagName === "A") {
+    if (clicked.dataset.for === "ecommerce") {
+      const markup = `
+        <div class="popup">
+          <div class="popup-content">
+            <div class="popup-left">
+              <img
+                src="assets/E - Commerce.jpg"
+                alt="E-Commerce"
+                class="popup-img"
+              />
+            </div>
+            <div class="popup-right">
+              <span class="popup-close">&times;</span>
+              <h3 class="heading-third">Fondateur - Boutiques en ligne</h3>
+              <ul class="popup-list">
+                <li>
+                  Création et gestion de boutiques à mono produit
+                  <a href="https://mastercrochet.fr" class="popup-links"
+                    >mastercrochet.fr</a
+                  >
+                  -
+                  <a href="https://juiceandco.fr/" class="popup-links"
+                    >juiceandco.fr</a
+                  >
+                </li>
+                <li>
+                  Création et gestion d’une boutique à multi produits
+                  <a href="https://beginnerz.fr" class="popup-links"
+                    >beginnerz.fr</a
+                  >
+                </li>
+              </ul>
+              <p class="popup-date">Toulouse, France (2020 / 2021)</p>
+          </div>
         </div>
-      </a>
-      <div class="links-container">
-        <ul class="navigation">
-          <li>Accueil</li>
-          <li>A propos</li>
-          <li>Expériences</li>
-          <li>Contact</li>
-          <a href="#" class="small-btn btn-outline-black">Savoir plus</a>
-        </ul>
       </div>
-      <hr class="container-end" />
-    </nav> */
+    `;
+      main.insertAdjacentHTML("afterbegin", markup);
+    }
+    if (clicked.dataset.for === "bluePartie") {
+      const markup = `
+        <div class="popup">
+          <div class="popup-content">
+            <div class="popup-left">
+              <img src="assets/Flyer.jpg" alt="Flyer" class="popup-img" />
+            </div>
+            <div class="popup-right">
+              <span class="popup-close">&times;</span>
+              <h3 class="heading-third">Fondateur - The Blue Party</h3>
+              <ul class="popup-list">
+                <li>
+                  Supervision des actions menées par l'ensemble des équipes, en
+                  fixant à chacune des objectifs précis.
+                </li>
+                <li>
+                  Surveillance des opérations quotidiennes et mise en œuvre de
+                  modifications afin de maintenir une meilleure satisfaction de la
+                  clientèle.
+                </li>
+              </ul>
+              <p class="popup-date">Alger, Algérie (07/2019 - 09/2019)</p>
+            </div>
+          </div>
+        </div>
+      `;
+      main.insertAdjacentHTML("afterbegin", markup);
+    }
+    if (clicked.dataset.for === "oppo") {
+      const markup = `
+        <div class="popup">
+          <div class="popup-content">
+            <div class="popup-left">
+              <img src="assets/Oppo.jpg" alt="Oppo" class="popup-img" />
+            </div>
+            <div class="popup-right">
+              <span class="popup-close">&times;</span>
+              <h3 class="heading-third">Conseiller de vente - Boutique OPPO</h3>
+              <ul class="popup-list">
+                <li>
+                  Utilisation d'une approche de vente consultative pour comprendre
+                  les besoins des clients et leur recommander des offres
+                  pertinentes.
+                </li>
+                <li>
+                  Après évaluation de leurs besoins, clients dirigés vers divers
+                  services en leur offrant des recommandations.
+                </li>
+                <li>
+                  Mise à jour des registres liés aux ventes, aux retours et à la
+                  disponibilité des stocks.
+                </li>
+              </ul>
+              <p class="popup-date">Alger, Algérie (03/2019 - 06/2019)</p>
+            </div>
+          </div>
+        </div>
+      `;
+      main.insertAdjacentHTML("afterbegin", markup);
+    }
+    if (clicked.dataset.for === "sos") {
+      const markup = `
+        <div class="popup">
+          <div class="popup-content">
+            <div class="popup-left">
+              <img src="assets/SOS.jpg" alt="S.O.S" class="popup-img" />
+            </div>
+            <div class="popup-right">
+              <span class="popup-close">&times;</span>
+              <h3 class="heading-third">Bénévole - S.O.S</h3>
+              <ul class="popup-list">
+                <li>
+                  Tâches administratives dans la campagne de collecte de fonds.
+                </li>
+              </ul>
+              <p class="popup-date">Tunis, Tunisie (06/2018 - 08/2018)</p>
+            </div>
+          </div>
+        </div>
+      `;
+      main.insertAdjacentHTML("afterbegin", markup);
+    }
+    const popup = document.querySelector(".popup");
+    closePopupBtn = document.querySelector(".popup-close");
+    closePopupBtn.addEventListener("click", () => {
+      main.removeChild(popup);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        main.removeChild(popup);
+      }
+    });
+  }
+});
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = contactEmail.value;
+  const subject = contactSubject.value;
+  const body = contactMessage.value;
+
+  const url = `mailto:rayan.cherad@gmail.com?bcc=${email}&subject=${subject}&body=${body}`;
+  window.open(url);
+
+  contactEmail.value = "";
+  contactSubject.value = "";
+  contactMessage.value = "";
+});
