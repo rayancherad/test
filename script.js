@@ -16,12 +16,11 @@ const headingTextLength = headingText.length;
 const newText = "Rayan Cherad.";
 
 // init
-window.addEventListener("load", () => {
-  if (screen.width < 1088)
-    document.body.innerHTML =
-      "<h1>Cannot Open the website on mobile screen!</h1>";
+if (screen.width < 1088) {
+  document.body.innerHTML =
+    "<h1>Cannot Open the website on mobile screen!</h1>";
   throw new Error("Cannot Open the website on mobile screen!");
-});
+}
 
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
