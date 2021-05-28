@@ -154,7 +154,7 @@ experienceEl.addEventListener("click", (e) => {
                 
                 
               </ul>
-              <p class="popup-date">Toulouse, France (2020 / 2021)</p>
+              
           </div>
         </div>
       </div>
