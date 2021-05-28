@@ -73,10 +73,10 @@ const stickyNav = (entries) => {
     <nav class="clearfix" id="nav">
       <a href="/">
         <div class="logo-container">
-          <img src="assets/logo3.png" alt="Ryan Cherad" class="nav-logo" />
+          <img src="assets/logo3.png" alt="Rayan Cherad" class="nav-logo" />
           <span
             class="nav__logo-name logo-name__start-animate logo-name__hidden"
-            >Ryan Cherad</span
+            >Rayan Cherad</span
           >
         </div>
       </a>
