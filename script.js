@@ -85,7 +85,11 @@ const stickyNav = (entries) => {
           <li><a href="#header">Accueil</a></li>
           <li><a href="#experiences">Expériences</a></li>
           <li><a href="#contact">Contact</a></li>
-          <a href="#" class="small-btn btn-outline-black">Savoir plus</a>
+          <a 
+            href="https://drive.google.com/file/d/1OTWkukCOQRi9ugqSyrPSLtEIw8fXoMYz/view?usp=sharing"
+            target="_blank" rel="noopener noreferrer" class="small-btn btn-outline-black">
+            Savoir plus
+          </a>
         </ul>
       </div>
       <hr class="container-end" />
