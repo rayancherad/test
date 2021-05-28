@@ -3,9 +3,9 @@
   --color-secondary: #FF7133;
   --color-dark: #000000;
   --color-white: #ffffff;
-  --main-background: linear-gradient(to right bottom, #424642, #1b2021);
+  --main-background: linear-gradient(to right bottom, #000000, #000000);
   --main-gradient: linear-gradient(to right bottom, #FF7133, #FF7133);
-  --heading-gradient: linear-gradient(to right, #eba83a, #ff5200);
+  --heading-gradient: linear-gradient(to right, #FF7133, #FF7133);
 }
 * {
   margin: 0;
