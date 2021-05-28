@@ -133,6 +133,8 @@ let closePopupBtn;
 experienceEl.addEventListener("click", (e) => {
   e.preventDefault();
   const clicked = e.target;
+  
+  
   if (clicked.tagName === "A") {
     if (clicked.dataset.for === "ecommerce") {
       const markup = `
@@ -147,24 +149,10 @@ experienceEl.addEventListener("click", (e) => {
             </div>
             <div class="popup-right">
               <span class="popup-close">&times;</span>
-              <h3 class="heading-third">Fondateur - Boutiques en ligne</h3>
+              
               <ul class="popup-list">
-                <li>
-                  Création et gestion de boutiques à mono produit
-                  <a href="https://mastercrochet.fr" class="popup-links"
-                    >mastercrochet.fr</a
-                  >
-                  -
-                  <a href="https://juiceandco.fr/" class="popup-links"
-                    >juiceandco.fr</a
-                  >
-                </li>
-                <li>
-                  Création et gestion d’une boutique à multi produits
-                  <a href="https://beginnerz.fr" class="popup-links"
-                    >beginnerz.fr</a
-                  >
-                </li>
+                
+                
               </ul>
               <p class="popup-date">Toulouse, France (2020 / 2021)</p>
           </div>
@@ -173,6 +161,9 @@ experienceEl.addEventListener("click", (e) => {
     `;
       main.insertAdjacentHTML("afterbegin", markup);
     }
+    
+    
+    
     if (clicked.dataset.for === "bluePartie") {
       const markup = `
         <div class="popup">
@@ -180,19 +171,13 @@ experienceEl.addEventListener("click", (e) => {
             <div class="popup-left">
               <img src="assets/Flyer.jpg" alt="Flyer" class="popup-img" />
             </div>
+            
             <div class="popup-right">
               <span class="popup-close">&times;</span>
-              <h3 class="heading-third">Fondateur - The Blue Party</h3>
+              
               <ul class="popup-list">
-                <li>
-                  Supervision des actions menées par l'ensemble des équipes, en
-                  fixant à chacune des objectifs précis.
-                </li>
-                <li>
-                  Surveillance des opérations quotidiennes et mise en œuvre de
-                  modifications afin de maintenir une meilleure satisfaction de la
-                  clientèle.
-                </li>
+                
+                
               </ul>
               <p class="popup-date">Alger, Algérie (07/2019 - 09/2019)</p>
             </div>
@@ -201,6 +186,8 @@ experienceEl.addEventListener("click", (e) => {
       `;
       main.insertAdjacentHTML("afterbegin", markup);
     }
+    
+    
     if (clicked.dataset.for === "oppo") {
       const markup = `
         <div class="popup">
@@ -210,21 +197,10 @@ experienceEl.addEventListener("click", (e) => {
             </div>
             <div class="popup-right">
               <span class="popup-close">&times;</span>
-              <h3 class="heading-third">Conseiller de vente - Boutique OPPO</h3>
+              
               <ul class="popup-list">
-                <li>
-                  Utilisation d'une approche de vente consultative pour comprendre
-                  les besoins des clients et leur recommander des offres
-                  pertinentes.
-                </li>
-                <li>
-                  Après évaluation de leurs besoins, clients dirigés vers divers
-                  services en leur offrant des recommandations.
-                </li>
-                <li>
-                  Mise à jour des registres liés aux ventes, aux retours et à la
-                  disponibilité des stocks.
-                </li>
+              
+                
               </ul>
               <p class="popup-date">Alger, Algérie (03/2019 - 06/2019)</p>
             </div>
@@ -233,6 +209,8 @@ experienceEl.addEventListener("click", (e) => {
       `;
       main.insertAdjacentHTML("afterbegin", markup);
     }
+    
+    
     if (clicked.dataset.for === "sos") {
       const markup = `
         <div class="popup">
@@ -242,11 +220,9 @@ experienceEl.addEventListener("click", (e) => {
             </div>
             <div class="popup-right">
               <span class="popup-close">&times;</span>
-              <h3 class="heading-third">Bénévole - S.O.S</h3>
+             
               <ul class="popup-list">
-                <li>
-                  Tâches administratives dans la campagne de collecte de fonds.
-                </li>
+                
               </ul>
               <p class="popup-date">Tunis, Tunisie (06/2018 - 08/2018)</p>
             </div>
