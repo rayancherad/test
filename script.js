@@ -154,7 +154,7 @@ experienceEl.addEventListener("click", (e) => {
                 
                 
               </ul>
-              <p class="popup-date">                 Toulouse, France (2020 / 2021)</p>
+              
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@ experienceEl.addEventListener("click", (e) => {
                 
                 
               </ul>
-              <p class="popup-date">Alger, Algérie (07/2019 - 09/2019)</p>
+              
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@ experienceEl.addEventListener("click", (e) => {
               
                 
               </ul>
-              <p class="popup-date">Alger, Algérie (03/2019 - 06/2019)</p>
+              
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@ experienceEl.addEventListener("click", (e) => {
               <ul class="popup-list">
                 
               </ul>
-              <p class="popup-date">Tunis, Tunisie (06/2018 - 08/2018)</p>
+              
             </div>
           </div>
         </div>
